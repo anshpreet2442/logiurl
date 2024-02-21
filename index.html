@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting..</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFA500"> <!-- Set the theme color to orange (#FFA500) -->
+   <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2653/2653482.png">
+<meta name="description" content="URL SHORTNER by Anshpreet">
+
+
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>
+  <span>Redirecting </span>
+  <span>
+    &nbsp;Soon..※
+    <span class="pops">
+      <span class="pop"></span>
+      <span class="pop"></span>
+      <span class="pop"></span>
+      <span class="pop"></span>
+            <span class="pop"></span>
+    </span>
+  </span>
+  <span>™</span>
+</h1>
+<!-- partial -->
+  
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom URL Redirection</title>
+  <script>
+    // Function to handle redirection based on fragments and passwords
+    function redirectBasedOnFragment() {
+        // Get the fragment from the URL
+        var fragment = window.location.hash.substr(1);
+
+        // Define redirection mappings along with passwords
+        var redirections = {
+            'ansh': { url: 'https://anshpreet2442.github.io/sundown/', password: '4757ansh' },
+            'mahip': { url: 'https://pixeldrain.com/', password: '' },
+            'manjeet': { url: 'anshpreet.com', password: '' },
+            'akshit': { url: 'https://pixeldrain.com/', password: '' },
+            'angel': { url: 'https://pixeldrain.com/', },
+            'gobind': { url: 'https://pixeldrain.com/', },
+            'armaan': { url: 'https://pixeldrain.com/', },
+            'nitya': { url: 'https://pixeldrain.com/', },
+            'nabu': { url: 'https://pixeldrain.com/', },
+            'friends': { url: 'https://moviesmod.dev/download-friends-720p-english-seaosn-10/', password: '1234' },
+            'harrypotter': { url: 'https://anshpreet2442.github.io/harrypotter/', password: '' },
+            'gppremium': { url: 'https://drive.google.com/file/d/1Vb_e5zRdXlPmrcbrarsnmcBz7iUbyea8/view?usp=sharing', password: '1234' },
+            'unstoppable': { url: 'https://drive.google.com/file/d/1sPgdR9-CXp37IaH2V7woSqpHvnDL_d2k/view?usp=sharing', password: '' },
+            'qara': { url: 'https://drive.google.com/file/d/1v-aiQyaDL-U0tnWT_2rD3wCbFC4hyUPb/view?usp=sharing', password: '4757ansh' },
+            'spotdl': { url: 'https://anshpreet2442.github.io/spotdl/spotdl.html', password: '' },
+            'ytplayer': { url: 'https://anshpreet2442.github.io/yt5-videolayer/', password: '' },
+            'audiovisual': { url: 'hhttps://anshpreet2442.github.io/audiovisual/', password: '' },
+            'whatsapp': { url: 'https://anshpreet2442.github.io/whatsapplinkgenrator/', password: '' },
+            'whatsapplinkgenerator': { url: 'https://anshpreet2442.github.io/whatsapplinkgenrator/', password: '' },
+            'expensemanager': { url: 'https://anshpreet2442.github.io/expenses/', password: '' },
+            'topmovies': { url: 'https://anshpreet2442.github.io/topmovies/', password: '' },
+            'netflix': { url: 'hhttps://anshpreet2442.github.io/topmovies/netflix.html', password: '' },
+            'premium': { url: 'https://anshpreet2442.github.io/topmovies/premium.html', password: '' },
+            'alpecalove': { url: 'https://anshpreet2442.github.io/alpecalove/', password: '' },
+            'peakyblinder': { url: 'https://anshpreet2442.github.io/spotdlfls/peakyblinders.html', password: '' },
+            'peakyblinders': { url: 'https://anshpreet2442.github.io/spotdlfls/peakyblinders.html', password: '' },
+            'budgettracker': { url: 'https://anshpreet2442.github.io/money-management/', password: '' },
+            'expensetracker': { url: 'https://anshpreet2442.github.io/money-management/', password: '' },
+            'budget': { url: 'https://anshpreet2442.github.io/money-management/', password: '' },
+            'trackexpense': { url: 'https://anshpreet2442.github.io/money-management/', password: '' },
+            'friendsfrontier': { url: 'https://www.friendsfrontier.fun/', password: '' },
+            'pixeldrain': { url: 'https://pixeldrain.com/', password: '' },
+            'friendsfrontier.fun/': { url: 'https://www.friendsfrontier.fun/', password: '' },
+            'frontieroffriends': { url: 'https://www.friendsfrontier.fun/', password: '' },
+            'domain2': { url: 'https://www.friendsfrontier.fun/', password: '' },
+            'gossipgirls5': { url: 'https://pixeldrain.com/l/r2fNYVu1', password: '' },
+            'gossipgirls6': { url: 'https://send.cm/axb5sw0w2f18', password: '' },
+            'hotel1': { url: 'https://www.makemytrip.com/hotels/hotel-details/?hotelId=202312111821446352&_uCurrency=INR&checkin=02012024&checkout=02292024&city=CTXKS&country=IN&filterData=HOUSE_RULES%7CUnmarried%20Couples%20Allowed%5EMERGE_PROPERTY_TYPE%7CVilla&homeStay=true&lat=30.94569&lng=76.9617&locusId=RGCDRH&locusType=region&rank=27&reference=hotel&roomStayQualifier=4e2e16e11e&rsc=1e4e2e16e11e&searchText=Chandigarh%20Capital%20Region&type=region&mtkeys=-8743771846721123297', password: '' },
+            '2024': { url: 'https://anshpreet2442.github.io/2024/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'greentube': { url: 'https://anshpreet2442.github.io/flixomedia94/', password: '' },
+            'flixomedia': { url: 'https://anshpreet2442.github.io/flixomedia94/', password: '' },
+            'roommate': { url: 'https://etus.link/roommate', password: '' },
+            'inheritance': { url: 'https://etus.link/inheritance', password: '' },
+            'himum8': { url: 'https://f.technicalatg.in/lXtusdkIW4', password: 'nabu' },
+            'himnum8ads': { url: 'https://etus.link/token7656', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            'navya': { url: 'https://pixeldrain.com/', password: '' },
+            // Add more mappings as needed
+        };
+
+        // Check if the fragment has a corresponding redirection
+        if (redirections.hasOwnProperty(fragment)) {
+            var redirectInfo = redirections[fragment];
+            var password = prompt('Enter the password: [If Exists] , by Default Password is blank , just click ok');
+
+            // Check if the password is correct
+            if (password === redirectInfo.password) {
+                // Redirect to the specified URL
+                window.location.href = redirectInfo.url;
+            } else {
+                alert('Incorrect password. Access denied.');
+            }
+        } else {
+            // Handle the case when no matching redirection is found
+            console.log("No redirection found for the given fragment.");
+        }
+    }
+
+    // Call the redirection function on page load
+    window.onload = redirectBasedOnFragment;
+</script>
+
+</head>
+<body>
+  
+    <!-- Your page content goes here -->
+</body>
+</html>
+  <style>
+        ::selection {
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <script>
+        document.addEventListener('selectionchange', function () {
+            var selectedText = getSelectedText();
+            if (selectedText !== '') {
+                document.execCommand('styleWithCSS', false, true);
+                document.execCommand('foreColor', false, 'red');
+                document.execCommand('styleWithCSS', false, false);
+            }
+        });
+
+        function getSelectedText() {
+            if (window.getSelection) {
+                return window.getSelection().toString();
+            } else if (document.selection && document.selection.type !== 'Control') {
+                return document.selection.createRange().text;
+            }
+            return '';
+        }
+    </script>
+
+
+
+  
+
+
+
+
+
+    <script>
+        document.addEventListener('keydown', function (event) {
+            // Check if the pressed key is the spacebar (key code 32) or the window key (key code 91)
+            if (event.keyCode === 32 || event.keyCode === ) {
+                // Redirect to the specified URL
+                window.location.href = 'https://api.whatsapp.com/send?phone=+7589590736&text=I%20too%20want%20to%20register%20a%20url%20on%20your%20page%20...';
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+        /* Style for the popup */
+        #registerPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+    </style>
+    <script>
+        // Function to show the registration popup
+        function showRegisterPopup() {
+            var popup = document.getElementById('registerPopup');
+            popup.style.display = 'block';
+        }
+
+        // Function to hide the registration popup
+        function hideRegisterPopup() {
+            var popup = document.getElementById('registerPopup');
+            popup.style.display = 'none';
+        }
+
+        // Function to handle URL registration
+        function registerURL() {
+            var inputWord = document.getElementById('wordInput').value;
+            var inputURL = document.getElementById('urlInput').value;
+
+            // Validate inputs
+            if (!inputWord || !inputURL) {
+                alert('Please enter both word and URL.');
+                return;
+            }
+
+            // Save the mapping to localStorage
+            var mappings = JSON.parse(localStorage.getItem('urlMappings')) || {};
+            mappings[inputWord] = inputURL;
+            localStorage.setItem('urlMappings', JSON.stringify(mappings));
+
+            // Close the popup after registration
+            hideRegisterPopup();
+        }
+
+        // Event listener to trigger the popup on key press
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'p') {
+                showRegisterPopup();
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Registration Popup -->
+    <div id="registerPopup">
+<h4>It may take some time to register your url , as weserver receives millions of request , Incase it fails , contact user , by typing [spacebar] </h4>
+        <label for="wordInput">Enter a word:</label>
+        <input type="text" id="wordInput" required>
+        <label for="urlInput">Enter your URL:</label>
+        <input type="url" id="urlInput" required>
+        <button onclick="registerURL()">Register</button>
+        <button onclick="hideRegisterPopup()">Cancel</button>
+    </div>
+
+    <!-- Your page content goes here -->
+
+
+
+
+
+
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the fragment from the URL
+      var fragment = window.location.hash.substring(1);
+
+      // Update the page title
+      document.title = "Redirecting to " + fragment;
+    });
+  </script>
+
+
+
+
+
